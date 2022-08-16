@@ -17,7 +17,7 @@
 						<div class="fw-info-box">
 							<img src="${contextPath }/resources/bootstrap/img/icons/1.png" alt="">
 							<div class="fw-info-text">
-								<p>1525  Awesome Lane, Los Angeles, CA</p>
+								<p>서울특별시 강남구, 선릉로 324, 지하1층</p>
 							</div>
 						</div>
 					</div>
@@ -28,8 +28,8 @@
 						<div class="fw-info-box">
 							<img src="${contextPath }/resources/bootstrap/img/icons/2.png" alt="">
 							<div class="fw-info-text">
-								<p>+1 (603)535-4592</p>
-								<p>+1 (603)535-4556</p>
+								<p>02-123-4592</p>
+								<p>02-123-4556</p>
 							</div>
 						</div>
 					</div>
@@ -40,8 +40,8 @@
 						<div class="fw-info-box">
 							<img src="${contextPath }/resources/bootstrap/img/icons/3.png" alt="">
 							<div class="fw-info-text">
-								<p>Contact@xgym.com</p>
-								<p>www.xgym.com</p>
+								<p>Contact@daygym.com</p>
+								<p>www.daygym.co.kr</p>
 							</div>
 						</div>
 					</div>

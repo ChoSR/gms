@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title></title>
+	<title>회원가입</title>
 	<style>
 		.col-md-new1{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}
 	</style>
@@ -23,7 +23,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<h2 class="contact-title">Get in touch</h2>
+					<h2 class="contact-title">Become Member</h2>
 					<form action="${contextPath }/member/register" method="post" class="contact-form">
 						<div class="row">
 							<div class="col-md-10">

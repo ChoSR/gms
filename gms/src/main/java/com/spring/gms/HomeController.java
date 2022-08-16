@@ -21,18 +21,6 @@ public class HomeController {
 		return "/main";
 	}
 	
-	@RequestMapping(value = "/about", method = RequestMethod.GET)
-	public String about() {
-		
-		return "/about";
-	}
-	
-	@RequestMapping(value = "/blog", method = RequestMethod.GET)
-	public String blog() {
-		
-		return "/blog";
-	}
-	
 	@RequestMapping(value = "/classes", method = RequestMethod.GET)
 	public String classes() {
 		
@@ -55,6 +43,12 @@ public class HomeController {
 	public String register() {
 		
 		return "/member/register";
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login() {
+		
+		return "/member/login";
 	}
 	
 }

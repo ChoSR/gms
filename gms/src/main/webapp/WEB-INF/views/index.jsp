@@ -88,26 +88,26 @@
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="milestone">
-						<h2>1374</h2>
-						<p>Happy Clients</p>
+						<h2>374</h2>
+						<p>회원 수</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="milestone">
-						<h2>356</h2>
-						<p>Strong Bodies</p>
+						<h2>12</h2>
+						<p>트레이너 수</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="milestone">
-						<h2>57k</h2>
-						<p>IG Followers</p>
+						<h2>1700</h2>
+						<p>daygym 팔로워 수</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="milestone">
 						<h2>24/7</h2>
-						<p>Working Hours</p>
+						<p>운영시간</p>
 					</div>
 				</div>
 			</div>
@@ -170,8 +170,8 @@
 			<div class="row">
 				<div class="col-lg-7 ml-auto">
 					<div class="section-title mb-0">
-						<h2>Calculate your <span>BMI</span></h2>
-						<p>Vivamus libero mauris, bibendum eget sapien ac, ultrices rhoncus ipsum nec sapien.Vivamus libero mauris, bibendum eget sapien ac, ultrices rhoncus ipsum nec sapien.</p>
+						<h2>당신의 <span>BMI</span>를 계산해 보세요</h2>
+						<p>체질량지수. 체중(kg)을 키의 제곱(㎡)으로 나눈 값을 통해 지방의 양을 추정하는 비만측정법이다. 체질량지수가 26인 경우에는 21인 사람에 비해 당뇨병에 걸릴 가능성이 여성의 경우에는 8배, 남성의 경우에는 4배에 달하고 담석증 및 고혈압이 발생할 확률도 2~3배나 높아지는 것으로 알려져 있다.</p>
 					</div>
 					<div class="bmi-calculator-warp">
 						<div class="bmi-calculator">

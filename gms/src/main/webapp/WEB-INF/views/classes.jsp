@@ -153,13 +153,13 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="section-title">
-					<h2>Do you need a <span>Personal Trainer?</span><br> Get in touch with us now. </h2>
+					<h2><span>Personal Trainer</span><br>관리가 필요한가요?</h2>
 				</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="classes-text">
-						<p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci. Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobortis a enim eget tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-						<a href="#" class="site-btn">Send us a message</a>
+						<p>현대 사회는 산업이 발달됨에 따라 자동화되고 기계화된 편리한 생활로 인해 신체활동이 점차 줄어들고 있다. 특히 교통수단의 발달은 운동부족 현상의 주범으로 간주된다. 인체는 활동(운동)이 부족하면 체력이 떨어지고, 이로 인해 신체기관의 기능도 저하된다. 기능 저하는 노화의 진행을 당길 뿐 아니라 성인병 등 각종 질병의 원인이 되기도 한다. 그러니 운동은 꼭 필요하다.</p>
+						<a href="./contact.jsp" class="site-btn">Contact Us</a>
 					</div>
 				</div>
 			</div>

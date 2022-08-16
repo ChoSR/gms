@@ -26,7 +26,7 @@
 						<div class="contact-info">
 							<img src="${contextPath }/resources/bootstrap/img/icons/1-dark.png" alt="">
 							<div class="cf-text">
-								<p>서울특별시 강남구, 선릉로 324, 지하1층</p>
+								<p>서울특별시 강남구 선릉로 324, 지하1층</p>
 							</div>
 						</div>
 					</div>

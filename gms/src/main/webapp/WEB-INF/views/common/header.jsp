@@ -9,17 +9,16 @@
 </head>
 <body>
 	<header class="header-section">
-		<a href="${contextPath }/WEB-INF/views/index.jsp" class="site-logo">
+		<a href="${contextPath }/" class="site-logo">
 			<img src="${contextPath }/resources/bootstrap/img/gymlogo2.png" alt="">
 		</a>
 		<ul class="main-menu">
-			<li><a class="active" href="./index.jsp">Center</a></li>
-			<li><a href="../about.jsp">Membership</a></li>
-			<li><a href="../classes.jsp">Classes</a></li>
-			<li><a href="${contextPath }/WEB-INF/views/blog.jsp">Notice</a></li>
-			<li><a href="${contextPath }/WEB-INF/views/contact.jsp">Contact</a></li>
-			<li><a href="${contextPath }/WEB-INF/views/contact.jsp">Login</a></li>
-			<li><a href="${contextPath }/WEB-INF/views/contact.jsp">Register</a></li>
+			<li><a class="active" href="${contextPath }/">Home</a></li>
+			<li><a href="${contextPath }/classes">Classes</a></li>
+			<li><a href="${contextPath }/notice">Notice</a></li>
+			<li><a href="${contextPath }/contact">Contact</a></li>
+			<li><a href="${contextPath }/login">Login</a></li>
+			<li><a href="${contextPath }/register">Register</a></li>
 			<li class="header-right">
 				<div class="hr-box">
 					<img src="${contextPath }/resources/bootstrap/img/location-icon.png" alt="">
