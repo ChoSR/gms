@@ -18,6 +18,7 @@ public class MemberDto {
 	private String jibunAddress;
 	private String namujiAddress;
 	private Date joinDt;
+	
 	public String getMemberId() {
 		return memberId;
 	}

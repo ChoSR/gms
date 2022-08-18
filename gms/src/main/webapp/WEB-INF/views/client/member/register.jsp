@@ -13,7 +13,7 @@
 	<!-- Page top section -->
 	<section class="page-top-section set-bg" data-setbg="${contextPath }/resources/bootstrap/img/header-bg/4.jpg">
 		<div class="container">
-			<h2>회원가입</h2>
+			<h2>Register</h2>
 		</div>
 	</section>
 	<!-- Page top section end -->

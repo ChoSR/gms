@@ -13,7 +13,7 @@
 			<div class="hero-text">
 				<h2>Physical activity</h2>
 				<h2>enhances <span>positive energy!</span></h2>
-				<a href="" class="site-btn">Join the DayGym</a>
+				<a href="${contextPath }/register" class="site-btn">Join the DayGym</a>
 			</div>
 		</div>
 	</section>

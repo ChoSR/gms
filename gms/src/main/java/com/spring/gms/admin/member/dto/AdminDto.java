@@ -1,11 +1,11 @@
-package com.spring.gms.member.dto;
+package com.spring.gms.admin.member.dto;
 
 import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class AdminMemberDto {
+public class AdminDto {
 	
 	private String adminId;
 	private String passwd;
@@ -28,10 +28,5 @@ public class AdminMemberDto {
 	}
 	public void setJoinDt(Date joinDt) {
 		this.joinDt = joinDt;
-	}
-	
-	@Override
-	public String toString() {
-		return "AdminMemberDto [adminId=" + adminId + ", passwd=" + passwd + ", joinDt=" + joinDt + "]";
 	}
 }

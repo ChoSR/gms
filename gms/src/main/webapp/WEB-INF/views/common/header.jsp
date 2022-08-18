@@ -17,8 +17,15 @@
 			<li><a href="${contextPath }/classes">Classes</a></li>
 			<li><a href="${contextPath }/notice">Notice</a></li>
 			<li><a href="${contextPath }/contact">Contact</a></li>
-			<li><a href="${contextPath }/login">Login</a></li>
-			<li><a href="${contextPath }/register">Register</a></li>
+		<c:choose>
+			<c:when test="${sessionScope.memberId eq null }">
+				<li><a href="${contextPath }/login">Login</a></li>
+				<li><a href="${contextPath }/register">Register</a></li>
+			</c:when>
+			<c:otherwise>
+				<li><a href="${contextPath }/member/logout">Logout</a></li>
+			</c:otherwise>
+		</c:choose>
 			<li class="header-right">
 				<div class="hr-box">
 					<img src="${contextPath }/resources/bootstrap/img/location-icon.png" alt="">
