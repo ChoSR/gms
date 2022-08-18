@@ -9,8 +9,9 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.spring.gms.member.dto.MemberDto" 			alias="MemberDto"/>
-		<typeAlias type="com.spring.gms.admin.member.dto.AdminDto" 		alias="AdminDto"/>
+		<typeAlias type="com.spring.gms.member.dto.MemberDto" 		alias="MemberDto"/>
+		<typeAlias type="com.spring.gms.admin.member.dto.AdminDto" 	alias="AdminDto"/>
+		<typeAlias type="com.spring.gms.common.dto.ContactDto"      alias="ContactDto" />
 	</typeAliases>
 	
 </configuration>

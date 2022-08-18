@@ -12,7 +12,7 @@
 		<h2>Server Problem</h2>
 		<img src="${contextPath }/resources/bootstrap/img/500.PNG" alt="500에러 이미지"><br>
 		<h4>관리자에게 연락주세요.</h4>
-		<h4>관리자 이메일 : spring@gmail.com</h4>
+		<h4>관리자 이메일 : elzpsla@naver.com</h4>
 	</div>
 </body>
 </html>

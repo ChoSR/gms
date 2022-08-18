@@ -7,12 +7,20 @@
 <meta charset="UTF-8">
 <title>관리자 로그인</title>
 <style>
-	.col-md-new1{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}
+	.pwd{   width: 100%;
+		    height: 60px;
+		    padding: 10px 29px;
+		    border: none;
+		    background: #edf3f5;
+		    margin-bottom: 19px;
+		    font-style: italic;
+		    font-size: 16px;
+		    color: #242424;}
 </style>
 </head>
 <body>
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="${contextPath }/resources/bootstrap/img/header-bg/4.jpg">
+	<section class="page-top-section set-bg" data-setbg="${contextPath }/resources/bootstrap/img/header-bg/3.jpg">
 		<div class="container">
 			<h2>Admin Login</h2>
 		</div>
@@ -31,9 +39,9 @@
 								<p>아이디 <span style="color:red;">*</span></p>
 								<input type="text" placeholder="아이디">
 							</div>
-							<div class="col-md-new1">
+							<div class="col-md-10">
 								<p>비밀번호 <span style="color:red;">*</span></p>
-								<input type="password" placeholder="비밀번호를 입력하세요">
+								<input type="password" class="pwd" placeholder="비밀번호를 입력하세요">
 							</div>
 						</div>
 						<div align="right">

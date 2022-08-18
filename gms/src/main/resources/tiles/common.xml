@@ -15,16 +15,6 @@
     	<put-attribute name="body" value="/WEB-INF/views/common/main.jsp" />
     </definition>
     
-    <definition name="/about" extends="baseLayout">
-    	<put-attribute name="title" value="ABOUT"/>
-    	<put-attribute name="body" value="/WEB-INF/views/about.jsp" />
-    </definition>
-    
-    <definition name="/blog" extends="baseLayout">
-    	<put-attribute name="title" value=""/>
-    	<put-attribute name="body" value="/WEB-INF/views/blog.jsp" />
-    </definition>
-    
     <definition name="/classes" extends="baseLayout">
     	<put-attribute name="title" value="CLASSES"/>
     	<put-attribute name="body" value="/WEB-INF/views/classes.jsp" />

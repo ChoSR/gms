@@ -6,12 +6,62 @@
 <head>
 	<title>회원가입</title>
 	<style>
-		.col-md-new1{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}
+		.pwd{    width: 100%;
+    height: 60px;
+    padding: 10px 29px;
+    border: none;
+    background: #edf3f5;
+    margin-bottom: 19px;
+    font-style: italic;
+    font-size: 16px;
+    color: #242424;}
 	</style>
+	
+<script>
+	$().ready(function() {
+		
+		$("#btnOverlapped").click(function(){
+			
+		    var memberId = $("#memberId").val();
+		   
+		    if (memberId == ''){
+		   		alert("ID를 입력하세요");
+		   		return;
+		    }
+		   
+		    $.ajax({
+		       type : "get",
+		       url  : "${contextPath}/member/checkDuplicatedId?memberId=" + memberId,
+		       success : function (data){
+		          if (data == "duplicate"){
+					  alert("사용할 수 있는 ID입니다.");
+		          }
+		          else {
+		          	  alert("사용할 수 없는 ID입니다.");
+		          }
+		       }
+		    });
+	 });
+		    
+		$("form").submit(function(){
+				
+				var dateBirth = $("#birthY").val() + "-" + $("#birthM").val() + "-" + $("#birthD").val();
+				$("[name='dateBirth']").val(dateBirth);
+			
+				if ($("#passwd").val() != $("#confirmPasswd").val()) {
+					alert("비밀번호를 확인하세요.");
+					$("#passwd").focus();
+					return false;
+				}
+				
+				
+			});
+	});	
+</script>
 </head>
 <body>
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="${contextPath }/resources/bootstrap/img/header-bg/4.jpg">
+	<section class="page-top-section set-bg" data-setbg="${contextPath }/resources/bootstrap/img/header-bg/3.jpg">
 		<div class="container">
 			<h2>Register</h2>
 		</div>
@@ -28,20 +78,20 @@
 						<div class="row">
 							<div class="col-md-10">
 								<p>아이디 <span style="color:red;">*</span></p>
-								<input type="text" placeholder="아이디">
+								<input type="text" id="memberId" name="memberId" placeholder="아이디">
 								<input type="button" id="btnOverlapped" value="중복확인"  style="width: 20%; padding-left: 0">
 							</div>
-							<div class="col-md-new1">
+							<div class="col-md-10">
 								<p>비밀번호 <span style="color:red;">*</span></p>
-								<input type="password" placeholder="비밀번호를 입력하세요">
+								<input type="password" id="passwd" name="passwd" class="pwd" placeholder="비밀번호를 입력하세요">
 							</div>
 							<div class="col-md-10">
 								<p>비밀번호 확인 <span style="color:red;">*</span></p>
-								<input type="password" placeholder="비밀번호를 확인하세요">
+								<input type="password" class="pwd" id="confirmPasswd" placeholder="비밀번호를 확인하세요">
 							</div>
 							<div class="col-md-10">
 								<p>이름 <span style="color:red;">*</span></p>
-								<input type="text" placeholder="이름">
+								<input type="text" name="memberNm" placeholder="이름">
 							</div>
                             <div class="col-md-10">
 								<p>전화번호 <span style="color:red;">*</span></p>
