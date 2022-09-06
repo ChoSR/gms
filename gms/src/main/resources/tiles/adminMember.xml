@@ -11,7 +11,7 @@
 		<put-attribute name="body" value="/WEB-INF/views/admin/member/adminLogin.jsp" />
 	</definition>
 	
-	<definition name="/member/adminMemberList" extends="baseLayout">
+	<definition name="/admin/member/adminMemberList" extends="baseLayout">
 		<put-attribute name="title" value="관리자 회원관리" />
 		<put-attribute name="body" value="/WEB-INF/views/admin/member/adminMemberList.jsp" />
 	</definition>

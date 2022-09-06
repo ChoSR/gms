@@ -28,14 +28,4 @@ public class MemberDaoImpl implements MemberDao {
 		return sqlSession.selectOne("member.selectDuplicatedId", memberId);
 	}
 
-	@Override
-	public int selectMyOrderCnt(String memberId) throws Exception {
-		return 0;
-	}
-
-	@Override
-	public int selectMyCartCnt(String memberId) throws Exception {
-		return 0;
-	}
-
 }

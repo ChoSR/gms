@@ -22,7 +22,7 @@
 	<!-- Page top section -->
 	<section class="page-top-section set-bg" data-setbg="${contextPath }/resources/bootstrap/img/header-bg/3.jpg">
 		<div class="container">
-			<h2>Admin Login</h2>
+			<h2>관리자 로그인 페이지</h2>
 		</div>
 	</section>
 	<!-- Page top section end -->
@@ -32,16 +32,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<h2 class="contact-title">Admin Login</h2>
+					<h2 class="contact-title">관리자 로그인</h2>
 					<form action="${contextPath }/admin/member/adminLogin" method="post" class="contact-form">
 						<div class="row">
 							<div class="col-md-10">
 								<p>아이디 <span style="color:red;">*</span></p>
-								<input type="text" placeholder="아이디">
+								<input type="text" name="adminId" placeholder="아이디">
 							</div>
 							<div class="col-md-10">
 								<p>비밀번호 <span style="color:red;">*</span></p>
-								<input type="password" class="pwd" placeholder="비밀번호를 입력하세요">
+								<input type="password" class="pwd" name="passwd" placeholder="비밀번호를 입력하세요">
 							</div>
 						</div>
 						<div align="right">

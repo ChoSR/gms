@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DAYGYM - 매일 운동하기</title>
 	<meta name="description" content="X Gym Fitness HTML Template">
 	<meta name="keywords" content="fitness, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,12 +27,14 @@
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="${contextPath }/resources/bootstrap/css/style.css"/>
 
-
+	<script src="${contextPath }/resources/bootstrap/js/jquery-3.3.1.min.js"></script>
+	
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	
 	<script>
 		function execDaumPostcode() {
 		    new daum.Postcode({
@@ -81,11 +83,12 @@
 	<!-- Footer Section End -->
 	
 	<!--====== Javascripts & Jquery ======-->
-	<script src="${contextPath }/resources/bootstrap/js/jquery-3.2.1.min.js"></script>
 	<script src="${contextPath }/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script src="${contextPath }/resources/bootstrap/js/circle-progress.min.js"></script>
+	<script src="${contextPath }/resources/bootstrap/js/jquery-3.2.1.min.js"></script>
 	<script src="${contextPath }/resources/bootstrap/js/jquery.slicknav.js"></script>
 	<script src="${contextPath }/resources/bootstrap/js/owl.carousel.min.js"></script>
-	<script src="${contextPath }/resources/bootstrap/js/circle-progress.min.js"></script>
 	<script src="${contextPath }/resources/bootstrap/js/main.js"></script>
+	<script src="${contextPath }/resources/ckeditor/ckeditor.js"></script>
 </body>
 </html>

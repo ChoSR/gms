@@ -41,7 +41,7 @@
 		          }
 		       }
 		    });
-	 });
+	 	});
 		    
 		$("form").submit(function(){
 				
@@ -53,9 +53,7 @@
 					$("#passwd").focus();
 					return false;
 				}
-				
-				
-			});
+		});
 	});	
 </script>
 </head>
@@ -95,7 +93,7 @@
 							</div>
                             <div class="col-md-10">
 								<p>전화번호 <span style="color:red;">*</span></p>
-								<input type="text" placeholder="전화번호">
+								<input type="text" name="hp" placeholder="전화번호">
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-6">
                                <div class="checkout__order__widget">

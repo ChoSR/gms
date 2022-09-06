@@ -17,17 +17,22 @@
     
     <definition name="/classes" extends="baseLayout">
     	<put-attribute name="title" value="CLASSES"/>
-    	<put-attribute name="body" value="/WEB-INF/views/classes.jsp" />
+    	<put-attribute name="body" value="/WEB-INF/views/client/goods/classes.jsp" />
     </definition>
     
     <definition name="/contact" extends="baseLayout">
     	<put-attribute name="title" value="CONTACT"/>
     	<put-attribute name="body" value="/WEB-INF/views/common/contact.jsp" />
     </definition>
-    
-    <definition name="/elements" extends="baseLayout">
-    	<put-attribute name="title" value="Fitness Club"/>
-    	<put-attribute name="body" value="/WEB-INF/views/elements.jsp" />
+
+    <definition name="/contactList" extends="baseLayout">
+    	<put-attribute name="title" value="CONTACT"/>
+    	<put-attribute name="body" value="/WEB-INF/views/common/contactList.jsp" />
+    </definition>
+
+    <definition name="/contactDetail" extends="baseLayout">
+    	<put-attribute name="title" value="CONTACT"/>
+    	<put-attribute name="body" value="/WEB-INF/views/common/contactDetail.jsp" />
     </definition>
     
     

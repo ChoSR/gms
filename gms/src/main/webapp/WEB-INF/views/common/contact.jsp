@@ -53,17 +53,17 @@
 				</div>
 				<div class="col-lg-8">
 					<h2 class="contact-title">Get in touch</h2>
-					<form class="contact-form">
+					<form class="contact-form" action="${contextPath }/contact" method="post">
 						<div class="row">
 							<div class="col-md-6">
-								<input type="text" placeholder="Your name">
+								<input type="text" name="name" placeholder="Your name">
 							</div>
 							<div class="col-md-6">
-								<input type="text" placeholder="Your e-mail">
+								<input type="text" name="email" placeholder="Your e-mail">
 							</div>
 							<div class="col-md-12">
-								<input type="text" placeholder="Subject">
-								<textarea placeholder="Message"></textarea>
+								<input type="text" name="subject" placeholder="Subject">
+								<textarea placeholder="Message" name="message"></textarea>
 								<button class="site-btn">Send Message</button>
 							</div>
 						</div>

@@ -1,8 +1,23 @@
 package com.spring.gms.admin.member.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined;
+import org.apache.poi.ss.usermodel.BorderStyle;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -10,8 +25,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring.gms.member.dto.MemberDto;
 import com.spring.gms.admin.member.dto.AdminDto;
 import com.spring.gms.admin.member.service.AdminMemberService;
 
@@ -68,4 +85,95 @@ public class AdminMemberController {
 		return mv;
 		
 	}
+	
+	@RequestMapping(value = "/modifyMemberInfo", method=RequestMethod.POST)
+	public ResponseEntity<Object> modifyMemberInfo(@RequestParam("memberId") String memberId,
+												@RequestParam("modType") String modType,
+												@RequestParam("value") String value) throws Exception {
+		
+		return new ResponseEntity<Object>(HttpStatus.OK);
+	}
+	
+	
+	
+	
+	
+	@RequestMapping(value="/memberExcelExport" , method=RequestMethod.GET)
+	public void memberExcelExport(HttpServletResponse response , @RequestParam Map<String, String> dateMap) throws Exception {
+		  
+		SimpleDateFormat joinSdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat fileSdf = new SimpleDateFormat("yyyy_MM_dd_hh_mm");
+		String makeFileTime = fileSdf.format(new Date());
+		String makeFileName = makeFileTime + "_memberList.xls";
+		
+	    Workbook wb = new HSSFWorkbook();
+	    Sheet sheet = wb.createSheet("회원리스트");
+	    Row row = null;
+	    Cell cell = null;
+
+	    int rowNo = 0;
+
+	    CellStyle headStyle = wb.createCellStyle();
+	    
+	    headStyle.setBorderTop(BorderStyle.THIN);
+	    headStyle.setBorderBottom(BorderStyle.THIN);
+	    headStyle.setBorderLeft(BorderStyle.THIN);
+	    headStyle.setBorderRight(BorderStyle.THIN);
+
+	    headStyle.setFillForegroundColor(HSSFColorPredefined.YELLOW.getIndex());
+	    headStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+	    headStyle.setAlignment(HorizontalAlignment.CENTER);
+
+	    CellStyle bodyStyle = wb.createCellStyle();
+	    bodyStyle.setBorderTop(BorderStyle.THIN);
+	    bodyStyle.setBorderBottom(BorderStyle.THIN);
+	    bodyStyle.setBorderLeft(BorderStyle.THIN);
+	    bodyStyle.setBorderRight(BorderStyle.THIN);
+
+	    row = sheet.createRow(rowNo++);
+	    cell = row.createCell(0);
+	    cell.setCellStyle(headStyle);
+	    cell.setCellValue("회원아이디");
+	    cell = row.createCell(1);
+	    cell.setCellStyle(headStyle);
+	    cell.setCellValue("회원이름");
+	    cell = row.createCell(2);
+	    cell.setCellStyle(headStyle);
+	    cell.setCellValue("휴대폰번호");
+	    cell = row.createCell(3);
+	    cell.setCellStyle(headStyle);
+	    cell.setCellValue("성별");
+	    cell = row.createCell(4);
+	    cell.setCellStyle(headStyle);
+	    cell.setCellValue("가입일자");
+	    
+		for (MemberDto memberDto :  adminMemberService.getMemberList()) {
+			row = sheet.createRow(rowNo++);
+	        cell = row.createCell(0);
+	        cell.setCellStyle(bodyStyle);
+	        cell.setCellValue(memberDto.getMemberId());
+	        cell = row.createCell(1);
+	        cell.setCellStyle(bodyStyle);
+	        cell.setCellValue(memberDto.getMemberNm());
+	        cell = row.createCell(2);
+	        cell.setCellStyle(bodyStyle);
+	        cell.setCellValue(memberDto.getHp());
+	        cell = row.createCell(3);
+	        cell.setCellStyle(bodyStyle);
+	        cell.setCellValue(memberDto.getSex());
+	        cell = row.createCell(4);
+	        cell.setCellStyle(bodyStyle);
+	        cell.setCellValue(joinSdf.format(memberDto.getJoinDt()));
+
+		} 
+
+	    response.setContentType("ms-vnd/excel");
+	    response.setHeader("Content-Disposition", "attachment;filename="+makeFileName);
+
+	    wb.write(response.getOutputStream());
+	    wb.close();
+		
+	}
+	
 }

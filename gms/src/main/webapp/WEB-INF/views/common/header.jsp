@@ -13,23 +13,31 @@
 			<img src="${contextPath }/resources/bootstrap/img/gymlogo2.png" alt="">
 		</a>
 		<ul class="main-menu">
-			<li><a class="active" href="${contextPath }/">Home</a></li>
-			<li><a href="${contextPath }/classes">Classes</a></li>
-			<li><a href="${contextPath }/notice">Notice</a></li>
-			<li><a href="${contextPath }/contact">Contact</a></li>
 		<c:choose>
 			<c:when test="${sessionScope.memberId eq null }">
+				<li><a href="${contextPath }/classes">Classes</a></li>
+        		<li><a href="${contextPath }/contact">Contact</a></li>
 				<li><a href="${contextPath }/login">Login</a></li>
 				<li><a href="${contextPath }/register">Register</a></li>
 			</c:when>
+			<c:when test="${sessionScope.memberId eq 'gmsadmin'}">
+				<li><a href="${contextPath }/admin/member/adminMemberList">User Management</a></li>
+				<li><a href="${contextPath }/admin/order/adminOrderList">Order Management</a></li>
+				<li><a href="${contextPath }/contactList">Contact Management</a></li>
+				<li><a href="${contextPath }/member/logout">Logout</a></li>
+			</c:when>
 			<c:otherwise>
+				<li><a href="${contextPath }/classes">Classes</a></li>
+        		<li><a href="${contextPath }/contact">Contact</a></li>
+		    	<li><a href="${contextPath }/myPage/myInfo?memberId=${sessionScope.memberId}">My Info</a></li>
+		  	  	<li><a href="${contextPath }/myPage/myOrderList?memberId=${sessionScope.memberId}">My Order</a></li>
 				<li><a href="${contextPath }/member/logout">Logout</a></li>
 			</c:otherwise>
 		</c:choose>
 			<li class="header-right">
 				<div class="hr-box">
 					<img src="${contextPath }/resources/bootstrap/img/location-icon.png" alt="">
-					<h6>1525  Amazing Lane, Los Angeles, CA</h6>
+					<h6>서울특별시 강남구 선릉로 324, 지하1층</h6>
 				</div>
 			</li>
 		</ul>

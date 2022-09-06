@@ -8,14 +8,14 @@
 				NAME,
 				EMAIL,
 				SUBJECT,
-				CONTENT,
+				MESSAGE,
 				REG_DT
 		)
 		VALUES (
 				#{name},
 				#{email},
 				#{subject},
-				#{content},
+				#{message},
 				NOW()
 		)
 	</insert>

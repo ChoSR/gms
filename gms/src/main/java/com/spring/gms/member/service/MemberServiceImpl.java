@@ -39,14 +39,4 @@ public class MemberServiceImpl implements MemberService {
 		else												return "notDuplicate";
 	}
 
-	@Override
-	public int getMyOrderCnt(String memberId) throws Exception {
-		return 0;
-	}
-
-	@Override
-	public int getMyCartCnt(String memberId) throws Exception {
-		return 0;
-	}
-
 }

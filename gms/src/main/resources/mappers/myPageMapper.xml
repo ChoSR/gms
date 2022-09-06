@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="myPage">
+
+	<resultMap type="hashmap" id="myOrderListMap">
+		<result column="ORDER_CD" 		 property="orderCd"/>
+		<result column="MEMBER_ID" 		 property="memberId"/>
+		<result column="ORDER_GOODS_QTY" property="orderGoodsQty"/>
+		<result column="PAYMENT_AMT" 	 property="paymentAmt"/>
+		<result column="PAY_ORDER_TIME"  property="payOrderTime"/>
+		<result column="GOODS_CD" 		 property="goodsCd"/>
+		<result column="GOODS_NM" 		 property="goodsNm"/>
+		<result column="PRICE" 		 	 property="price"/>
+		<result column="TRIANER_NM"		 property="trainerNm"/>
+	</resultMap>
+
+	<select id="selectListMyOrder" parameterType="String" resultMap="myOrderListMap">
+		SELECT
+				O.ORDER_CD 		  	AS ORDER_CD,
+				O.MEMBER_ID			AS MEMBER_ID,
+		        O.ORDER_GOODS_QTY 	AS ORDER_GOODS_QTY,
+		        O.PAYMENT_AMT 		AS PAYMENT_AMT,
+		        O.PAY_ORDER_TIME  	AS PAY_ORDER_TIME,
+		        G.GOODS_CD  	  	AS GOODS_CD,
+		        G.GOODS_NM  	  	AS GOODS_NM,
+		        G.PRICE				AS PRICE,
+		        G.TRAINER_NM		AS TRAINER_NM
+		FROM
+				`ORDER` O
+			JOIN GOODS  G
+				    ON  O.GOODS_CD = G.GOODS_CD
+				   AND  O.MEMBER_ID = #{memberId}
+	</select>
+	
+	<resultMap type="hashmap" id="myOrderDetailMap">
+		<result column="ORDER_CD" 		 	property="orderCd"/>
+		<result column="ORDER_GOODS_QTY" 	property="orderGoodsQty"/>
+		<result column="PAYMENT_AMT" 		property="paymentAmt"/>
+		<result column="ORDERER_NM"  		property="ordererNm"/>
+		<result column="ORDERER_HP" 		property="ordererHp"/>
+		<result column="ZIPCODE" 			property="zipcode"/>
+		<result column="ROAD_ADDRESS" 		property="roadAddress"/>
+		<result column="JIBUN_ADDRESS" 		property="jibunAddress"/>
+		<result column="NAMUJI_ADDRESS" 	property="namujiAddress"/>
+		<result column="PAY_METHOD" 		property="payMethod"/>
+		<result column="PAY_ORDERER_HP" 	property="payOrdererHp"/>
+		<result column="PAY_ORDER_TIME" 	property="payOrderTime"/>
+		<result column="CARD_COMPANY_NM" 	property="cardCompanyNm"/>
+		<result column="CARD_PAY_MONTH" 	property="cardPayMonth"/>
+		<result column="GOODS_CD" 			property="goodsCd"/>
+		<result column="GOODS_NM" 			property="goodsNm"/>
+		<result column="PRICE" 				property="price"/>
+	</resultMap>
+	
+  	<select id="selectOneMyOrder" parameterType="hashmap" resultMap="myOrderDetailMap">
+		SELECT
+				O.ORDER_CD		   AS ORDER_CD,
+		        O.ORDER_GOODS_QTY  AS ORDER_GOODS_QTY,
+		        O.PAYMENT_AMT 	   AS PAYMENT_AMT,
+		        O.ORDERER_NM	   AS ORDERER_NM,
+		        O.ORDERER_HP 	   AS ORDERER_HP,
+		        O.ZIPCODE 		   AS ZIPCODE,
+		        O.ROAD_ADDRESS     AS ROAD_ADDRESS,
+		        O.JIBUN_ADDRESS    AS JIBUN_ADDRESS,
+		        O.NAMUJI_ADDRESS   AS NAMUJI_ADDRESS,
+		        O.PAY_METHOD 	   AS PAY_METHOD,
+		        O.PAY_ORDERER_HP   AS PAY_ORDERER_HP,
+		        O.PAY_ORDER_TIME   AS PAY_ORDER_TIME,
+		        O.CARD_COMPANY_NM  AS CARD_COMPANY_NM,
+		        O.CARD_PAY_MONTH   AS CARD_PAY_MONTH,
+		        G.GOODS_CD 		   AS GOODS_CD,
+		        G.GOODS_NM 		   AS GOODS_NM,
+		        G.PRICE 		   AS PRICE,
+		        G.TRAINER_NM	   AS TRAINER_NM
+		FROM
+				`ORDER` O
+			JOIN MEMBER M
+					 ON M.MEMBER_ID = O.MEMBER_ID
+					AND M.MEMBER_ID = #{memberId}
+		     JOIN GOODS G
+					 ON G.GOODS_CD = O.GOODS_CD
+					AND O.ORDER_CD = #{orderCd}
+	</select>
+	
+  	<select id="selectOneMyInfo" parameterType="String" resultType="MemberDto">
+		SELECT
+				*
+		FROM
+				MEMBER
+		WHERE
+				MEMBER_ID = #{memberId}
+	</select>
+	
+	<update id="updateMyInfo" parameterType="MemberDto">
+		UPDATE 
+	   			MEMBER
+	   <set> 
+	      <if test='memberNm != null and memberNm != ""'>
+	        MEMBER_NM = #{memberNm},
+	      </if>
+	      <if test='passwd != null and passwd != ""'>
+	        PASSWD = #{passwd},
+	      </if>
+	      <if test='sex != null and sex != ""'>
+	        SEX = #{sex},
+	      </if>
+	      <if test='dateBirth != null and dateBirth != ""'>
+	        DATE_BIRTH = #{dateBirth},
+	      </if>
+	      <if test='hp != null and hp != ""'>
+	        HP = #{hp},
+	      </if>
+	      <if test='zipcode != null and zipcode != ""'>
+	        ZIPCODE = #{zipcode},
+	      </if>
+	      <if test='roadAddress != null and roadAddress != ""'>
+	        ROAD_ADDRESS = #{roadAddress},
+	      </if>
+	      <if test='jibunAddress != null and jibunAddress != ""'>
+	        JIBUN_ADDRESS = #{jibunAddress},
+	      </if>
+	      <if test='namujiAddress != null and namujiAddress != ""'>
+	        NAMUJI_ADDRESS = #{namujiAddress},
+	      </if>
+	    </set>
+		WHERE 
+				MEMBER_ID = #{memberId}
+	</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM
+				MEMBER
+		WHERE
+				MEMBER_ID = #{memberId}
+	</delete>
+	
+	
+</mapper>

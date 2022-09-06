@@ -69,12 +69,22 @@
 				</div>
 				<div class="col-md-6 order-1 order-md-2">
 					<ul class="footer-menu">
-						<li><a href="">Home</a></li>
-						<li><a href="">About Us</a></li>
-						<li><a href="">Classes</a></li>
-						<li><a href="">News</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="${contextPath }/">Home</a></li>
+			<li><a href="${contextPath }/classes">Classes</a></li>
+        	<li><a href="${contextPath }/contact">Contact</a></li>
+		<c:choose>
+			<c:when test="${sessionScope.memberId eq null }">
+				<li><a href="${contextPath }/login">Login</a></li>
+				<li><a href="${contextPath }/register">Register</a></li>
+			</c:when>
+			<c:otherwise>
+			    <li><a href="${contextPath }/myPage/myInfo?memberId=${sessionScope.memberId}"><span class="icon_info"></span> My Info</a></li>
+				<li><a href="${contextPath }/member/logout">Logout</a></li>
+			</c:otherwise>
+		</c:choose>
 					</ul>
+					
+					
 				</div>
 			</div>
 		</div>

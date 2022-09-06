@@ -74,7 +74,7 @@
 							<li><img src="img/check-icon.png" alt="">수량이 모두 소진 될 시 조기종료 될 수 있습니다.</li>
 							<li><img src="img/check-icon.png" alt="">카드 결제시 부가세 별도</li>
 						</ul>
-						<a href="#" class="site-btn">가격 알아보기</a>
+						<a href="${contextPath }/classes" class="site-btn">가격 알아보기</a>
 					</div>
 				</div>
 			</div>
@@ -119,7 +119,7 @@
 	<section class="trainers-section">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>Meet the <span>Trainers</span></h2>
+				<h2>전문 <span>트레이너</span>들을 만나보세요</h2>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
