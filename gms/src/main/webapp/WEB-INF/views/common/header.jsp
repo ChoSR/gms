@@ -24,6 +24,9 @@
 				<li><a href="${contextPath }/admin/member/adminMemberList">User Management</a></li>
 				<li><a href="${contextPath }/admin/order/adminOrderList">Order Management</a></li>
 				<li><a href="${contextPath }/contactList">Contact Management</a></li>
+				<!-- 
+				<li><a href="${contextPath }/noticeEdit">Notice Management</a></li>
+				 -->
 				<li><a href="${contextPath }/member/logout">Logout</a></li>
 			</c:when>
 			<c:otherwise>
@@ -31,6 +34,9 @@
         		<li><a href="${contextPath }/contact">Contact</a></li>
 		    	<li><a href="${contextPath }/myPage/myInfo?memberId=${sessionScope.memberId}">My Info</a></li>
 		  	  	<li><a href="${contextPath }/myPage/myOrderList?memberId=${sessionScope.memberId}">My Order</a></li>
+		  	  	<!-- 
+		  	  	<li><a href="${contextPath }/notice">Notice</a></li>
+		  	  	 -->
 				<li><a href="${contextPath }/member/logout">Logout</a></li>
 			</c:otherwise>
 		</c:choose>

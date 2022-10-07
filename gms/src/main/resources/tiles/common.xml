@@ -35,5 +35,32 @@
     	<put-attribute name="body" value="/WEB-INF/views/common/contactDetail.jsp" />
     </definition>
     
+    <definition name="/bodybuilding" extends="baseLayout">
+    	<put-attribute name="title" value="BODYBUILDING"/>
+    	<put-attribute name="body" value="/WEB-INF/views/client/goods/bodybuilding.jsp" />
+    </definition>
+    
+    <definition name="/fitness" extends="baseLayout">
+    	<put-attribute name="title" value="FITNESS"/>
+    	<put-attribute name="body" value="/WEB-INF/views/client/goods/fitness.jsp" />
+    </definition>
+
+
+    <definition name="/aerobic" extends="baseLayout">
+    	<put-attribute name="title" value="AEROBIC"/>
+    	<put-attribute name="body" value="/WEB-INF/views/client/goods/aerobic.jsp" />
+    </definition>
+
+    <definition name="/pilates" extends="baseLayout">
+    	<put-attribute name="title" value="PILATES"/>
+    	<put-attribute name="body" value="/WEB-INF/views/client/goods/pilates.jsp" />
+    </definition>
+    
+    <definition name="/personalTraining" extends="baseLayout">
+    	<put-attribute name="title" value="PT"/>
+    	<put-attribute name="body" value="/WEB-INF/views/client/goods/personalTraining.jsp" />
+    </definition>
+    
+    
     
  </tiles-definitions>

@@ -32,57 +32,69 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-sm-6">
-					<div class="icon-box-item"><a href="${contextPath }/bodybuilding" ></a>
+					<div class="icon-box-item">
 						<div class="ib-icon">
-							<i class="flaticon-050-weightlifting"></i>
+							<a href="${contextPath }/bodybuilding" >
+								<i class="flaticon-050-weightlifting"></i>
+							</a>
 						</div>
 						<h4>Bodybuilding</h4>
-						<p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci. </p>
+						<p>전문적인 보디빌딩 선수과정을 성공하기 위한 프로 트레이너들의 명단을 확인하세요!!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<div class="icon-box-item"><a href="${contextPath }/fitness" ></a>
+					<div class="icon-box-item">
 						<div class="ib-icon">
-							<i class="flaticon-045-fitness"></i>
+							<a href="${contextPath }/personalTraining" >
+								<i class="flaticon-045-fitness"></i>
+							</a>
 						</div>
 						<h4>Fitness</h4>
-						<p>Vivamus libero mauris, bibendum eget sapien ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermentum ornare.</p>
+						<p>취미와 건강을 위한 운동을 체계적으로 관리를 해줄 트레이너들의 명단을 확인하세요!!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<div class="icon-box-item"><a href="${contextPath }/aerobic" ></a>
+					<div class="icon-box-item">
 						<div class="ib-icon">
-							<i class="flaticon-033-pump"></i>
+							<a href="${contextPath }/aerobic" >
+								<i class="flaticon-033-pump"></i>
+							</a>
 						</div>
 						<h4>Aerobic</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada.  </p>
+						<p>효과적인 칼로리 소모 짧은 시간에 많은 칼로리를 소모해줄 트레이너들의 명단을 확인하세요!!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<div class="icon-box-item"><a href="${contextPath }/pilates" ></a>
+					<div class="icon-box-item">
 						<div class="ib-icon">
-							<i class="flaticon-017-weightlifting-1"></i>
+							<a href="${contextPath }/pilates" >
+								<i class="flaticon-017-weightlifting-1"></i>
+							</a>
 						</div>
 						<h4>Pilates</h4>
-						<p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci. </p>
+						<p>아름다운 몸매와 라인을 가꿔줄 트레이너들의 명단을 확인하세요!!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<div class="icon-box-item"><a href="${contextPath }/personalTraining" ></a>
+					<div class="icon-box-item">
 						<div class="ib-icon">
-							<i class="flaticon-004-dumbbell"></i>
+							<a href="${contextPath }/personalTraining" >
+								<i class="flaticon-004-dumbbell"></i>
+							</a>
 						</div>
 						<h4>Personal Training</h4>
-						<p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci. </p>
+						<p>체계적인 식단관리 효과적인 체중감량과 근육증량을 도와줄 트레이너들의 명단을 확인하세요!!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<div class="icon-box-item"><a href="${contextPath }/personalTraining"></a>
+					<div class="icon-box-item">
 						<div class="ib-icon">
-							<i class="flaticon-038-vitamins"></i>
+							<a href="${contextPath }/personalTraining">
+								<i class="flaticon-038-vitamins"></i>
+							</a>
 						</div>
 						<h4>Managing</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. </p>
+						<p>체계적인 식단관리 효과적인 체중감량과 근육증량을 도와줄 트레이너들의 명단을 확인하세요!!</p>
 					</div>
 				</div>
 			</div>

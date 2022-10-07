@@ -115,54 +115,6 @@
 	</section>
 	<!-- Milestones section end -->
 
-	<!-- Trainers section -->
-	<section class="trainers-section">
-		<div class="container">
-			<div class="section-title text-center">
-				<h2>전문 <span>트레이너</span>들을 만나보세요</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic">
-							<img src="${contextPath }/resources/bootstrap/img/trainers/1.jpg" alt="">
-						</div>
-						<h4>Michael Smith</h4>
-						<p>Vivamus libero mauris, bibendum eget sapien ac, ultrices rhoncus ipsum nec sapien.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic">
-							<img src="${contextPath }/resources/bootstrap/img/trainers/2.jpg" alt="">
-						</div>
-						<h4>Jessica Black</h4>
-						<p>Ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermentum ornare.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic">
-							<img src="${contextPath }/resources/bootstrap/img/trainers/3.jpg" alt="">
-						</div>
-						<h4>James Brown</h4>
-						<p>Libero mauris, bibendum eget sapien ac, ultrices rhoncus ipsum. Donec nec sapien.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="trainer-item">
-						<div class="trainer-pic">
-							<img src="${contextPath }/resources/bootstrap/img/trainers/4.jpg" alt="">
-						</div>
-						<h4>Paula Carlton</h4>
-						<p>Sapien ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermen-tum ornare.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Trainers section end -->
-
 	<!-- BMI section -->
 	<section class="bmi-section spad">
 		<div class="bmi-bg set-bg" data-setbg="${contextPath }/resources/bootstrap/img/bmi-bg.jpg"></div>
