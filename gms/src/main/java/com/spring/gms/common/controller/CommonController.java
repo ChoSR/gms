@@ -115,13 +115,23 @@ public class CommonController {
 		return "/bodybuilding";
 	}
 
-	@RequestMapping(value = "/fitness", method=RequestMethod.GET)
-	public String fitness() {
+	@RequestMapping(value = "/aerobic", method=RequestMethod.GET)
+	public String aerobic() {
 		
-		return "/fitness";
+		return "/aerobic";
 	}
 	
+	@RequestMapping(value = "/personalTraining", method=RequestMethod.GET)
+	public String personalTraining() {
+		
+		return "/personalTraining";
+	}
 	
+	@RequestMapping(value = "/pilates", method=RequestMethod.GET)
+	public String pilates() {
+		
+		return "/pilates";
+	}
 	
 	
 	

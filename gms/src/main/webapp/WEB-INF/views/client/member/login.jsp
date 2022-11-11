@@ -46,7 +46,7 @@
 						</div>
 						<div align="left">
 	                       	<button type="submit" class="site-btn"><span class="icon_plus"></span>로그인</button>
-                       		<button class="site-btn sb-line""><a href="${contextPath }/member/register">회원가입 하러가기</a></button>
+                       		<a class="site-btn sb-line" href="${contextPath }/member/register">회원가입 하러가기</a>
                        	</div>
 					</form>
 				</div>
